@@ -4,9 +4,9 @@ import sys
 """
     1. There are a lot of trades that have their close time more than 30 days after the open time. More than 5,000 records have their close time in 2022
     and open time in 2020. This problem has been addressed in the SQL query, but the correct close time cannot be determined by the given infomation.
-    2. Some contract size is shown as Null in the trade table. It seems to only related with symbol 'COFFEE'    
-    3. Pandas is used in this case due to the data volume
-    
+    2. Some contract size is shown as Null in the trade table. It seems to only related with symbol 'COFFEE', will require further infomation to process this. 
+    4. Two rows have strange symbol with a ',' in the values. 
+    4. One server is only found in trades table (3 distinct in total), one server is only found in users table (3 distinct in total). This is believed to be a data integrity issue         
 """
 def check_Alphanumeric(df):
     """Check if the column contains non-alphanumeric values"""
